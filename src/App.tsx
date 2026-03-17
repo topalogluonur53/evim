@@ -155,6 +155,18 @@ function SenaryoPage({ mode, evFiyati, kiraOrani, katilimOrani }: { mode: string
       </div>
 
       <div className="section-label">Taksit planı</div>
+      
+      <div className="taksit-summary-mini">
+        <div className="taksit-row-summary">
+          <span className="taksit-no">Katılım Payı</span>
+          <span className="taksit-val-bold">{fmt(kiraGetirisi)}</span>
+        </div>
+        <div className="taksit-row-summary">
+          <span className="taksit-no">Peşinat</span>
+          <span className="taksit-val-bold">{fmt(Math.max(pesinat,0))}</span>
+        </div>
+      </div>
+
       {groups.map((g,gi)=>(
         <div className="taksit-group" key={gi}>
           {g.map(t=>(

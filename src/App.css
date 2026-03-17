@@ -278,3 +278,34 @@
   font-weight: 600;
   color: var(--color-text-primary);
 }
+
+.taksit-summary-mini {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.taksit-row-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--color-background-secondary);
+  border: 1.5px solid var(--color-border-primary);
+  border-radius: 14px;
+}
+
+.taksit-row-summary .taksit-no {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.taksit-val-bold {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
