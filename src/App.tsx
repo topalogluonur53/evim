@@ -122,20 +122,6 @@ function SenaryoPage({ mode, evFiyati, kiraOrani, katilimOrani }: { mode: string
     <div className="page-content">
       <div className="hint">{mode==="s1"?"Peşinat elle girilir, 1–6 taksitler otomatik hesaplanır.":"1. taksit elle girilir, peşinat otomatik hesaplanır."}</div>
 
-      <div className="metric-grid">
-        {[
-          {l:"Katılım payı", v:fmt(kiraGetirisi)},
-          {l:"İlk 6 ayda ödenecek taksitler", v:fmt(toplamKatilim)},
-          {l:"Peşinat", v:fmt(Math.max(pesinat,0))},
-          {l:"Toplam ödeme", v:fmt(Math.max(toplamOdeme,0))},
-        ].map(m=>(
-          <div className="metric" key={m.l}>
-            <div className="metric-label">{m.l}</div>
-            <div className="metric-val">{m.v}</div>
-          </div>
-        ))}
-      </div>
-
       <div className="section-label">Veri girişi</div>
       <div className="input-card">
         {(mode==="s1" ? s1rows : s2rows).map((r,i)=><InputRow key={i} {...r}/>)}
